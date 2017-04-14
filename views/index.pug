@@ -2,6 +2,8 @@ html
   head
     title A Microservice for Time
     meta(charset="utf-8")
+    script(src='/javascripts/jquery.min.js')
+    script(src='/javascripts/client.js')
     style
       include style.css
     link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Patrick+Hand|Sigmar+One|Nunito' type='text/css') 
@@ -20,3 +22,6 @@ html
       h2.heading Example Output
       div.text-block
         p.code {"unix":1492041600,"natural":"April 13, 2017"}
+      h2.heading The Current Epoch Time is...
+        p#epoch
+        

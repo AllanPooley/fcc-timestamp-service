@@ -6,7 +6,7 @@ const months = ["January", "February", "March", "April", "May", "June", "July",
 "August", "September", "October", "November", "December"];
 
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');              
+app.set('view engine', 'pug');
 
 app.get('/', function(req, res) {
   res.render('index');
