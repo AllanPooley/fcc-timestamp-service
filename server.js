@@ -5,6 +5,7 @@ var app = express();
 const months = ["January", "February", "March", "April", "May", "June", "July", 
 "August", "September", "October", "November", "December"];
 
+app.use(express.static('public'));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 

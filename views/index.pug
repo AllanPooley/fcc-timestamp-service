@@ -2,10 +2,7 @@ html
   head
     title A Microservice for Time
     meta(charset="utf-8")
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js')
-    script(src='/javascripts/client.js')
-    style
-      include style.css
+    link(rel='stylesheet', href='/style.css')
     link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Patrick+Hand|Sigmar+One|Nunito' type='text/css') 
 
   div.container
@@ -17,11 +14,14 @@ html
       
       h2.heading Example API Calls
       div.text-block
-        p.code https://timestamp-ms.herokuapp.com/April%2013,%202017<br /><br />
-        p.code https://timestamp-ms.herokuapp.com/1492041600
+        p.code https://timestamps.glitch.me/April%2013,%202017<br /><br />
+        p.code https://timestamps.glitch.me/1492041600
       h2.heading Example Output
       div.text-block
         p.code {"unix":1492041600,"natural":"April 13, 2017"}
       h2.heading The Current Epoch Time is...
         p#epoch
+        
+  script(src="https://code.jquery.com/jquery-2.2.1.min.js", integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=", crossorigin="anonymous")
+  script(src='/javascripts/client.js')
         
