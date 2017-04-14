@@ -1,0 +1,22 @@
+html
+  head
+    title A Microservice for Time
+    meta(charset="utf-8")
+    style
+      include style.css
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Patrick+Hand|Sigmar+One|Nunito' type='text/css') 
+
+  div.container
+    h1.heading A Timestamp Microservice
+    div.box
+      h2.heading Description
+      div.text-block
+        p.text This service provides time in both <b>natural</b> and <b>unix</b> formats. <br /><br /><b>The natural format</b> is the time as written in english language, in the form of: DD Month, YYYY.<br /><br /><b>The unix format</b> (also known as POSIX time or epoch time) denotes the number of seconds that have elapsed since 00:00:00 Coordinated Universal Time (UTC), Thursday, 1 January 1970, not counting leap seconds.<br /><br /><b>Simply pass the time in a natural or unix format on the tail end of this url!</b>
+      
+      h2.heading Example API Calls
+      div.text-block
+        p.code https://timestamp-ms.herokuapp.com/April%2013,%202017<br /><br />
+        p.code https://timestamp-ms.herokuapp.com/1492041600
+      h2.heading Example Output
+      div.text-block
+        p.code {"unix":1492041600,"natural":"April 13, 2017"}

@@ -1,8 +1,16 @@
 var express = require('express');
+var path = require('path');
 var app = express();
 
 const months = ["January", "February", "March", "April", "May", "June", "July", 
-                "August", "September", "October", "November", "December"];
+"August", "September", "October", "November", "December"];
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');              
+
+app.get('/', function(req, res) {
+  res.render('index');
+});
 
 app.get('/:date', function(req, res) {
     
@@ -25,14 +33,13 @@ app.get('/:date', function(req, res) {
     
     }
     
-    
     res.end();
     
 });
 
 
 app.listen(8080, function () {
-  console.log('Timestamp service listening on port 8080!')
+  console.log('Timestamp service listening on port 8080!');
 });
 
 function parseDate(dateStr) {
